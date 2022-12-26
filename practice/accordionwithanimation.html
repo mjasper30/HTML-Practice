@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion with Animation</title>
+
+    <style>
+      .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      .accordion:after {
+        content: "\02795"; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+      }
+    </style>
+  </head>
+  <body>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+        accusamus, ducimus praesentium repellendus architecto veritatis suscipit
+        magni error necessitatibus eum.
+      </p>
+    </div>
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse explicabo
+        eaque quis assumenda illo repellendus voluptatibus beatae fugiat sed
+        dolor.
+      </p>
+    </div>
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+        obcaecati, blanditiis earum quisquam nisi perferendis dolorem neque illo
+        dolores assumenda!
+      </p>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

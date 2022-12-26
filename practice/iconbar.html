@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Bar</title>
+    <script
+      src="https://kit.fontawesome.com/43fbaf01db.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* VERTICAL ICON BAR */
+      .icon-bar-vertical {
+        width: 50px;
+        background-color: white;
+      }
+
+      .icon-bar-vertical a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        transition: all ease 0.2s;
+        /* border: solid black 1px; */
+      }
+
+      .icon-bar-vertical a:hover {
+        color: rgb(35, 34, 49);
+      }
+
+      .icon-bar-vertical a.active {
+        color: rgba(35, 34, 49);
+      }
+
+      /* HORIZONTAL ICON BAR */
+      .icon-bar-horizontal {
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+      }
+
+      .icon-bar-horizontal a {
+        float: left;
+        text-align: center;
+        width: 50px;
+        padding: 10px 0;
+        transition: all ease 0.2s;
+        /* border: solid black 1px; */
+      }
+
+      .icon-bar-horizontal a:hover {
+        color: rgb(255, 111, 15);
+      }
+
+      .icon-bar-horizontal a.active {
+        color: rgba(243, 174, 26, 0.781);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="icon-bar-vertical">
+      <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="fa-solid fa-user"></i></a>
+      <a href="#"><i class="fa-solid fa-phone"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <br /><br /><br />
+
+    <div class="icon-bar-horizontal">
+      <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+      <a href="#"><i class="fa-solid fa-user"></i></a>
+      <a href="#"><i class="fa-solid fa-phone"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </body>
+</html>
